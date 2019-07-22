@@ -5,5 +5,11 @@ Demonstration fro Trio2o concept is designed as two DevStack nodes tied together
 ## Setup first Node (node-1)
 
   python --version
+  
   pip install openstackclient
-  openstack list images
+  
+  openstack --version
+  
+  source ../*openrc.sh
+  
+  nova list
