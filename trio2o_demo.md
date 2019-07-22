@@ -4,6 +4,7 @@ Demonstration fro Trio2o concept is designed as two DevStack nodes tied together
 
 ## Setup first Node (node-1)
 
+```bash
   python --version
   
   pip install openstackclient
@@ -13,3 +14,4 @@ Demonstration fro Trio2o concept is designed as two DevStack nodes tied together
   source ../*openrc.sh
   
   nova list
+  ```
