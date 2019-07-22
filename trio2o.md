@@ -2,7 +2,7 @@
 
 ## Description
 
-The Trio2o is to provide APIs gateway for multiple OpenStack clouds, spanning in one site or multiple sites or in hybrid cloud, to act as a single OpenStack cloud.
+The [Trio2o](https://wiki.openstack.org/wiki/Trio2o) is to provide APIs gateway for multiple OpenStack clouds, spanning in one site or multiple sites or in hybrid cloud, to act as a single OpenStack cloud.
 
 Trio2o is API gateway (API entrance ) just like Nova API in API Cell, even simpler, for just forwarding the request, and leave the request parameter validation to be done in bottom OpenStacks. No VM/volume/backup/snapshot data will be stored in Trio2o.
 
