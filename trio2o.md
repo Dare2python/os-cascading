@@ -1,4 +1,4 @@
-# Demo for Trio2o project
+# Trio2o project
 
 ## Description
 
@@ -26,3 +26,6 @@ There are several options:
 * Shared Glance with distributed back-end (OpenStack instances are located in several sites).
 * Distributed Glance deployment (multiple site with distributed back-end).
 * Separate Glance deployment (each site is installed with separate Glance instance and back-end, no cross site image sharing is needed).
+
+## Demo
+[Demo](trio2o_demo.md)
