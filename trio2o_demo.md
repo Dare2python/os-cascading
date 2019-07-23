@@ -1,4 +1,4 @@
-# Demo for Trio2o
+# Demo script for Trio2o
 
 Demonstration fro Trio2o concept is designed as two DevStack nodes tied together with a single API gateway,
 
