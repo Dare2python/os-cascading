@@ -27,5 +27,5 @@ There are several options:
 * Distributed Glance deployment (multiple site with distributed back-end).
 * Separate Glance deployment (each site is installed with separate Glance instance and back-end, no cross site image sharing is needed).
 
-## Demo
-[Demo](trio2o_demo.md)
+## Demo script
+[Script](trio2o_demo.md)
