@@ -107,7 +107,8 @@ Demonstration fro Trio2o concept is designed as two DevStack nodes tied together
   disable_service heat
   OPAE_INSTALL_ENABLE=false
   # disable_service horizon
-  EOF
+EOF
+  
   cat ./local.conf
   tmux
   ./stack.sh
