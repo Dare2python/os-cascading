@@ -13,7 +13,7 @@ by looking into OpenStack Cascading solution/prototype.
 This looks like a prototype for aggregating multiple small OpenStack clouds.
 There are two versions:
 * original [Cascading PoC](https://wiki.openstack.org/wiki/OpenStack_cascading_solution) presented in 2014-2015
-* v2 communicated to OpenStack community 2016-2017
+* v2 communicated to OpenStack community during 2016-2017
 
 Now it looks stale and abandoned with no recent commits, new contributors, fresh presentation etc.
 
