@@ -67,8 +67,48 @@ OPAE_INSTALL_ENABLE=false
 EOF
 
 cat ./local.conf
-tmux
-./stack.sh
+tmux \
+  new-session  "./stack.sh ; read" \; \
+  split-window "watch -n 0.5 pstree ; read" \; \
+  set-option -g mouse on \; \
+  select-layout even-horizontal
+
+
+```
+
+### Test Trio2o on first VM
+```bash
+source openrc admin admin
+unset OS_REGION_NAME
+openstack --os-region-name=RegionOne endpoint list
+token=$(openstack --os-region-name=RegionOne token issue | awk 'NR==5 {print $4}')
+echo $token
+curl -X GET http://127.0.0.1:19996/v1.0/pods -H "Content-Type: application/json" \
+    -H "X-Auth-Token: $token"
+neutron --os-region-name=RegionOne net-create net1
+neutron --os-region-name=RegionOne subnet-create net1 10.0.0.0/24
+glance --os-region-name=RegionOne image-list
+nova --os-region-name=RegionOne flavor-create test 1 1024 10 1
+nova --os-region-name=RegionOne flavor-list
+
+# nova --os-region-name=RegionOne boot --flavor 1 --image $image_id --nic net-id=$net_id vm1
+# nova --os-region-name=RegionOne boot --flavor 1 --image aa5d3c84-a095-47a1-91e5-479a2dde80ce --nic net-id=d69d3db6-0f93-43b4-bc23-c7a04768ab75 vm1
+openstack server create --os-region-name=RegionOne vm1 --net net1 --flavor test --image cirros-0.4.0-x86_64-disk
+
+nova --os-region-name=RegionOne list
+nova --os-region-name=Pod1 list
+neutron --os-region-name=RegionOne port-list
+openstack server show vm1
+
+openstack volume create --os-region-name=RegionOne --availability-zone=az1 1 --size 1 
+openstack volume  list 
+openstack volume  list --os-region-name=RegionOne
+# cinder show fd437a9f-44b4-4e97-a366-4b4c4bbf3695
+openstack volume show fd437a9f-44b4-4e97-a366-4b4c4bbf3695
+
+nova --debug --os-region-name=RegionOne list
+# cinder --debug --os-region-name=RegionOne list
+openstack --debug  volume show fd437a9f-44b4-4e97-a366-4b4c4bbf3695
 
 ```
 
@@ -106,7 +146,17 @@ OPAE_INSTALL_ENABLE=false
 EOF
   
 cat ./local.conf
-tmux
-./stack.sh
+tmux \
+  new-session  "./stack.sh ; read" \; \
+  split-window "watch -n 0.5 pstree ; read" \; \
+  set-option -g mouse on \; \
+  select-layout even-horizontal
+
+```
+
+### Clean up 
+```bash
+# openstack server delete node-1
+# openstack server delete node-2
 
 ```
