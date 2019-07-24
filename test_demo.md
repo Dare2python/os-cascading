@@ -3,6 +3,16 @@
 ```bash
 # ssh-keyscan -H 172.16.245.216 >> ~/.ssh/known_hosts
 ssh ubuntu@172.16.245.216
+```
+
+1
+
+-----
+
+2
+
+
+```bash
 uname -a
 sudo useradd -s /bin/bash -d /opt/stack -m stack
 echo "stack ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/stack
