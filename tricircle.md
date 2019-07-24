@@ -23,4 +23,4 @@ There are several options:
 * Separate Glance deployment (each site is installed with separate Glance instance and back-end, no cross site image sharing is needed).
 
 ## Demo script
-[Script](Tricircle_demo.md)
+[Script](tricircle_demo.md)
