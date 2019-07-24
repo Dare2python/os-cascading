@@ -5,7 +5,7 @@
 The [Tricircle](https://wiki.openstack.org/wiki/Tricircle) is dedicated for networking automation across Neutron in multi-region OpenStack deployment.
 
 
-[OPNFV Multisite](https://wiki.opnfv.org/display/multisite/Multisite) is NFV related incarnation of Tricircle project. It looks stale as well. The last meeting was held on May 18th, 2017.
+[OPNFV Multisite](https://wiki.opnfv.org/display/multisite/Multisite) is NFV related incarnation of Tricircle project. It looks stale as well. The last meeting was held on May 18th, 2017. Last [commit](https://github.com/opnfv/multisite) is on 30 Mar 2017.
 
 ## Architecture
 
