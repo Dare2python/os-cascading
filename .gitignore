@@ -1,2 +1,6 @@
 # Jekyll site
 _site/
+
+# Demo-magic and generated scripts
+demo-magic.sh
+test.sh
