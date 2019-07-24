@@ -10,9 +10,21 @@ sudo su - stack
 git clone https://opendev.org/openstack/devstack
 cd devstack
 ```
+
+
+bla
+
 -----
+
+
+bla
 
 ```bash
 ping -c 2 192.168.0.30
 ip -c a s ens3
 ```
+bla
+
+-----
+
+bla
