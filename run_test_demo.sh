@@ -32,9 +32,17 @@ DEMO_PROMPT="${GREEN}➜ ${CYAN}$ "
 # hide the evidence
 clear
 
-sed -n '/^```bash.*/,/^```$/p' test_demo.md \
+sed -n '/^```bash.*/,/^```$/p;/^-----$/p' test_demo.md \
 | \
-sed '/^```/d' |
+sed \
+  -e 's/^-----$/\
+p  ""\
+p  "################################################################################################### Press <ENTER> to continue"\
+wait\
+/' \
+  -e 's/^```bash.*/\
+pe '"'"'/' \
+  -e 's/^```$/'"'"'/' \
 > test.sh
 
 if [ "$#" -eq 0 ]; then
