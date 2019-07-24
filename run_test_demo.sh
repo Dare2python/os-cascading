@@ -32,9 +32,7 @@ DEMO_PROMPT="${GREEN}➜ ${CYAN}$ "
 # hide the evidence
 clear
 
-sed test_demo.md \
-| \
-sed -n '/^```bash.*/,/^```$/p' \
+sed -n '/^```bash.*/,/^```$/p' test_demo.md \
 | \
 sed '/^```/d' |
 > test.sh
